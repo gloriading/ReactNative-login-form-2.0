@@ -1,17 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 export default class Landing extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.logoContainer}>
+        <TouchableOpacity
+          style={styles.logoContainer}
+          onPress={()=> this.props.navigation.navigate('Entry')}
+          >
           <Image
             style={ styles.logo }
             source={require('../images/dragon_logo.png')}
           />
           <Text style={ styles.title }>CHANGE.HAPPENS.HERE</Text>
-        </View>
+        </TouchableOpacity>
         <Text style={ styles.name }>
           <Text style={ styles.pink }>Glorious </Text>
            App Design

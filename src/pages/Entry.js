@@ -2,9 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default class Entry extends React.Component {
+  static navigationOptions = {
+    title: 'Glorious App Design',
+  };
+
   render() {
     return (
       <View style={styles.container}>
+
         <TouchableOpacity style={ styles.largeBtnContainer }>
           <Text style={ styles.largeBtnContent }>
             log in
