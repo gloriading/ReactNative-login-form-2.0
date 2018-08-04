@@ -10,7 +10,10 @@ export default class Entry extends React.Component {
     return (
       <View style={styles.container}>
 
-        <TouchableOpacity style={ styles.largeBtnContainer }>
+        <TouchableOpacity
+          style={ styles.largeBtnContainer }
+          onPress={()=> this.props.navigation.navigate('Login')}
+          >
           <Text style={ styles.largeBtnContent }>
             log in
           </Text>
