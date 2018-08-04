@@ -1,9 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { LogoTitle } from '../misc/LogoTitle';
 
 export default class Entry extends React.Component {
   static navigationOptions = {
-    title: 'Glorious App Design',
+    headerTitle: <LogoTitle />,
   };
 
   render() {
@@ -31,7 +32,6 @@ export default class Entry extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.2)',
     justifyContent: 'center',
     alignItems: 'center'
   },

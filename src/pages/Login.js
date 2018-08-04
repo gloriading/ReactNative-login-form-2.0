@@ -1,7 +1,15 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, StatusBar } from 'react-native';
+import { LogoTitle } from '../misc/LogoTitle';
 
 export default class Login extends React.Component {
+  static navigationOptions = {
+    headerTitle: <LogoTitle />,
+    headerStyle: {
+      // backgroundColor: 'lightgrey',
+    },
+  };
+
   render(){
     return(
         <View style={ styles.container }>
@@ -38,7 +46,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     padding: 20,
     paddingTop: 40,
-    backgroundColor: 'rgba(0,0,0,0.2)',
   },
   input: {
     height: 40,

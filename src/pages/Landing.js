@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 export default class Landing extends React.Component {
+
   render() {
     return (
       <View style={styles.container}>
@@ -27,7 +28,7 @@ export default class Landing extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.2)',
+    borderWidth: 0,
   },
   logoContainer: {
     flex: 1,
