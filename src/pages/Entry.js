@@ -19,7 +19,10 @@ export default class Entry extends React.Component {
             log in
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={ styles.largeBtnContainer }>
+        <TouchableOpacity
+          style={ styles.largeBtnContainer }
+          onPress={()=> this.props.navigation.navigate('SignUpStepOne')}
+          >
           <Text style={ styles.largeBtnContent }>
             sign up
           </Text>
