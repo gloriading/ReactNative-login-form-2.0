@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, StatusBar } from 'react-native';
 import { LogoTitle } from '../misc/LogoTitle';
+import NavStyles from '../misc/NavStyles';
 
 export default class SignUpStepOne extends React.Component {
   static navigationOptions = {
     headerTitle: <LogoTitle />,
+    ...NavStyles
   };
 
   constructor(props){
@@ -19,6 +21,7 @@ export default class SignUpStepOne extends React.Component {
           <StatusBar barStyle="dark-content"/>
           <Text style={ styles.inputLabel }>Please enter your email:</Text>
           <TextInput
+            underlineColorAndroid="transparent"
             returnKeyType="next"
             keyboardType="email-address"
             autoCapitalize="none"

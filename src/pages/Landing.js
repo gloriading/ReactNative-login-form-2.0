@@ -1,7 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, StatusBar } from 'react-native';
+import NavStyles from '../misc/NavStyles';
 
 export default class Landing extends React.Component {
+  static navigationOptions = {
+    ...NavStyles
+  };
 
   render() {
     return (
@@ -29,6 +33,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     borderWidth: 0,
+    backgroundColor: '#ffb142',
   },
   logoContainer: {
     flex: 1,

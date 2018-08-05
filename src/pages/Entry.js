@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { LogoTitle } from '../misc/LogoTitle';
+import NavStyles from '../misc/NavStyles';
 
 export default class Entry extends React.Component {
   static navigationOptions = {
     headerTitle: <LogoTitle />,
+    ...NavStyles
   };
 
   render() {

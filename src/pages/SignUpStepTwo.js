@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, StatusBar } from 'react-native';
 import { LogoTitle } from '../misc/LogoTitle';
+import NavStyles from '../misc/NavStyles';
 
 export default class SignUpStepTwo extends React.Component {
   static navigationOptions = {
     headerTitle: <LogoTitle />,
+    ...NavStyles
   };
 
   constructor(props){
@@ -23,6 +25,7 @@ export default class SignUpStepTwo extends React.Component {
           <StatusBar barStyle="dark-content"/>
           <Text style={ styles.inputLabel }>First Name:</Text>
           <TextInput
+            underlineColorAndroid="transparent"
             returnKeyType="next"
             autoCapitalize="none"
             autoCorrect={false}
@@ -34,6 +37,7 @@ export default class SignUpStepTwo extends React.Component {
 
           <Text style={ styles.inputLabel }>Last Name:</Text>
           <TextInput
+            underlineColorAndroid="transparent"
             returnKeyType="next"
             autoCapitalize="words"
             autoCorrect={false}
@@ -45,6 +49,7 @@ export default class SignUpStepTwo extends React.Component {
 
           <Text style={ styles.inputLabel }>Preferred Name:</Text>
           <TextInput
+            underlineColorAndroid="transparent"
             returnKeyType="next"
             autoCapitalize="words"
             autoCorrect={false}

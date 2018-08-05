@@ -1,13 +1,17 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, StatusBar } from 'react-native';
 import { LogoTitle } from '../misc/LogoTitle';
+import NavStyles from '../misc/NavStyles';
+
 
 export default class Login extends React.Component {
   static navigationOptions = {
     headerTitle: <LogoTitle />,
+    ...NavStyles,
     headerStyle: {
-      // backgroundColor: 'lightgrey',
+      backgroundColor: '#f4511e',
     },
+    
   };
 
   render(){
@@ -16,6 +20,7 @@ export default class Login extends React.Component {
           <StatusBar barStyle="dark-content"/>
           <Text style={ styles.inputLabel }>Email</Text>
           <TextInput
+            underlineColorAndroid="transparent"
             returnKeyType="next"
             keyboardType="email-address"
             autoCapitalize="none"
@@ -25,6 +30,7 @@ export default class Login extends React.Component {
             style={ styles.input } />
           <Text style={ styles.inputLabel }>Password</Text>
           <TextInput
+            underlineColorAndroid="transparent"
             returnKeyType="send"
             secureTextEntry
             style={ styles.input }
