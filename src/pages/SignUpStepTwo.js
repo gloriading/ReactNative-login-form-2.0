@@ -26,6 +26,7 @@ export default class SignUpStepTwo extends React.Component {
             returnKeyType="next"
             autoCapitalize="none"
             autoCorrect={false}
+            autoFocus={true}
             onChangeText={(firstName) => this.setState({firstName})}
             onSubmitEditing={()=> this.lastNameInput.focus()}
             value={this.state.text}

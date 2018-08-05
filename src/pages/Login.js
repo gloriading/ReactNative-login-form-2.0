@@ -20,6 +20,7 @@ export default class Login extends React.Component {
             keyboardType="email-address"
             autoCapitalize="none"
             autoCorrect={false}
+            autoFocus={true}
             onSubmitEditing={()=> this.passwordInput.focus()}
             style={ styles.input } />
           <Text style={ styles.inputLabel }>Password</Text>

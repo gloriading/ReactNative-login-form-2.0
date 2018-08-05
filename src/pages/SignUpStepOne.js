@@ -22,6 +22,7 @@ export default class SignUpStepOne extends React.Component {
             returnKeyType="next"
             keyboardType="email-address"
             autoCapitalize="none"
+            autoFocus={true}
             autoCorrect={false}
             onChangeText={(text) => this.setState({text})}
             value={this.state.text}
