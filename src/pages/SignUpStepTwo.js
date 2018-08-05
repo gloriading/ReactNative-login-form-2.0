@@ -2,14 +2,18 @@ import React from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, StatusBar } from 'react-native';
 import { LogoTitle } from '../misc/LogoTitle';
 
-export default class SignUpStepOne extends React.Component {
+export default class SignUpStepTwo extends React.Component {
   static navigationOptions = {
     headerTitle: <LogoTitle />,
   };
 
   constructor(props){
     super(props);
-    this.state = { text: '' }
+    this.state = {
+      firstName: '',
+      lastName: '',
+      preferredName: ''
+    }
   }
 
 
@@ -17,20 +21,38 @@ export default class SignUpStepOne extends React.Component {
     return(
         <View style={ styles.container }>
           <StatusBar barStyle="dark-content"/>
-          <Text style={ styles.inputLabel }>Please enter your email:</Text>
+          <Text style={ styles.inputLabel }>First Name:</Text>
           <TextInput
             returnKeyType="next"
-            keyboardType="email-address"
             autoCapitalize="none"
             autoCorrect={false}
-            onChangeText={(text) => this.setState({text})}
+            onChangeText={(firstName) => this.setState({firstName})}
+            onSubmitEditing={()=> this.lastNameInput.focus()}
             value={this.state.text}
             style={ styles.input } />
 
-          <TouchableOpacity
-            style={ styles.buttonContainer }
-            onPress={()=> this.props.navigation.navigate('SignUpStepTwo')}
-            >
+          <Text style={ styles.inputLabel }>Last Name:</Text>
+          <TextInput
+            returnKeyType="next"
+            autoCapitalize="words"
+            autoCorrect={false}
+            onChangeText={(lastName) => this.setState({lastName})}
+            ref={(input)=> this.lastNameInput = input}
+            onSubmitEditing={()=> this.preferredNameInput.focus()}
+            value={this.state.text}
+            style={ styles.input } />
+
+          <Text style={ styles.inputLabel }>Preferred Name:</Text>
+          <TextInput
+            returnKeyType="next"
+            autoCapitalize="words"
+            autoCorrect={false}
+            onChangeText={(preferredName) => this.setState({preferredName})}
+            ref={(input)=> this.preferredNameInput = input}
+            value={this.state.text}
+            style={ styles.input } />
+
+          <TouchableOpacity style={ styles.buttonContainer }>
             <Text style={ styles.buttonContent }>Next</Text>
           </TouchableOpacity>
         </View>
