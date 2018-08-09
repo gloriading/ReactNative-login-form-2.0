@@ -8,10 +8,6 @@ export default class Login extends React.Component {
   static navigationOptions = {
     headerTitle: <LogoTitle />,
     ...NavStyles,
-    headerStyle: {
-      backgroundColor: '#f4511e',
-    },
-    
   };
 
   render(){
@@ -34,8 +30,7 @@ export default class Login extends React.Component {
             returnKeyType="send"
             secureTextEntry
             style={ styles.input }
-            ref={(input)=> this.passwordInput = input}
-           />
+            ref={(input)=> this.passwordInput = input} />
 
           <TouchableOpacity style={ styles.buttonContainer }>
             <Text style={ styles.buttonContent }>LOGIN</Text>

@@ -14,7 +14,6 @@ export default class SignUpStepOne extends React.Component {
     this.state = { text: '' }
   }
 
-
   render(){
     return(
         <View style={ styles.container }>
