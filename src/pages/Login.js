@@ -32,7 +32,10 @@ export default class Login extends React.Component {
             style={ styles.input }
             ref={(input)=> this.passwordInput = input} />
 
-          <TouchableOpacity style={ styles.buttonContainer }>
+          <TouchableOpacity
+            style={ styles.buttonContainer }
+            onPress={ ()=> alert('Logging in...')}
+            >
             <Text style={ styles.buttonContent }>LOGIN</Text>
           </TouchableOpacity>
           <Text style={styles.forgetPassword}>Forget Password?</Text>
@@ -48,6 +51,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     padding: 20,
     paddingTop: 40,
+    backgroundColor: '#ffb142',
   },
   input: {
     height: 40,

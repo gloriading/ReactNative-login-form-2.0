@@ -58,7 +58,10 @@ export default class SignUpStepTwo extends React.Component {
             value={this.state.text}
             style={ styles.input } />
 
-          <TouchableOpacity style={ styles.buttonContainer }>
+          <TouchableOpacity
+            style={ styles.buttonContainer }
+            onPress={ ()=> alert('to be continued...')}
+            >
             <Text style={ styles.buttonContent }>Next</Text>
           </TouchableOpacity>
         </View>
@@ -73,6 +76,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     padding: 20,
     paddingTop: 40,
+    backgroundColor: '#ffb142',
   },
   input: {
     height: 40,

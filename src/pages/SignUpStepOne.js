@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     padding: 20,
     paddingTop: 40,
+    backgroundColor: '#ffb142',
   },
   input: {
     height: 40,
